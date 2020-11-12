@@ -1,0 +1,50 @@
+codigo_iata;cod_cidade;nome;;código ICAO;código nacional
+JNB;GCR;O. R. Tambo International Airport;;FAOR;JNB
+ALA;ALA;Almaty International Airport;;UAAA;36870
+PEK;CN-BJ;Beijing Capital International Airport;;ZBAA;54511
+HKG;HK;Hong Kong International Airport;;VHHH;HKG
+NRT;JP-13;Narita International Airport;;RJAA;47686
+ICN;SCA;Incheon International Airport;;RKSI;IIA / 47113
+DEL;NCT / IN-DL;Indira Gandhi International;;VIDP;DEL
+;;;;;
+EZE;BUE;Aeroporto Internacional Ministro Pistarini;;SAEZ;87576
+BSB;BSB;Aeroporto Internacional de Brasília;;;
+GIG;RIO;Aeroporto Internacional Tom Jobim;;;
+SDU;RIO;Aeroporto Santos Dumont;;;
+CWB;CWB;Aeroporto Internacional Afonso Pena;;;
+PLU;BHZ;Aeroporto de Belo Horizonte;;;
+FLN;FLN;Aeroporto Internacional de Florianópolis;;;
+SSA;SSA;Aeroporto Internacional de Salvador;;;
+FOR;FOR;Aeroporto Internacional de Fortaleza;;;
+SCL;SCL;Aeroporto Internacional Arturo Merino Benítez;;;
+JFK;NYC;Aeroporto Internacional John F. Kennedy;;;
+MEX;MEX;Aeroporto Internacional da Cidade do México;;;
+GDL;GDL;Aeroporto Internacional de Guadalajara;;;
+LHR;LON;Aeroporto de Londres Heathrow;;;
+LDB;LDB;Aeroporto de Londrina;;;
+HDL;LIS;Aeroporto Humberto Delgado;;;
+CDG;PAR;Aeroporto de Paris-Charles de Gaulle;;;
+DXB;DXB;Aeroporto Internacional de Dubai;;;
+DCA;WAS;Aeroporto Nacional Ronald Reagan de Washington;;;
+ATL;ATL;Aeroporto Internacional Hartsfield-Jackson Atlanta;;;
+HND;TYO;Aeroporto Haneda;;;
+DEN;DEN;Aeroporto Internacional de Denver;;;
+GRU;SAO;Aeroporto Internacional de São Paulo/Guarulhos;;;
+CGH;SAO;Aeroporto de São Paulo/Congonhas;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+cod_cidade;nome cidade;cod país;país;;
+GCR;Kempton Park;ZAR;África do Sul;;
+ALA;Almaty;KZ;Cazaquistão;;
+CN-BJ;Pequim;CN;China;;
+HK;Hong Kong;CN;China;;
+JP-13;Tóquio;JP;Japão;;
+SCA;Seoul;KR;Coreia do Sul;;
+NCT / IN-DL;Deli;IN;Índia;;
