@@ -1,0 +1,1 @@
+DROP DATABASE etapa2;
