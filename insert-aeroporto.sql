@@ -1,0 +1,27 @@
+INSERT INTO public.aeroporto(
+  codigo_iata, codigo_cidade, nome)
+  VALUES 
+    ('EZE', 'BUE', 'Aeroporto Internacional Ministro Pistarini'), 
+    ('BSB', 'BSB', 'Aeroporto Internacional de Brasília'), 
+    ('GIG', 'RIO', 'Aeroporto Internacional Tom Jobim'), 
+    ('SDU', 'RIO', 'Aeroporto Santos Dumont'), 
+    ('CWB', 'CWB', 'Aeroporto Internacional Afonso Pena'), 
+    ('PLU', 'BHZ', 'Aeroporto de Belo Horizonte'), 
+    ('FLN', 'FLN', 'Aeroporto Internacional de Florianópolis'),
+    ('SSA', 'SSA', 'Aeroporto Internacional de Salvador'), 
+    ('FOR', 'FOR', 'Aeroporto Internacional de Fortaleza'), 
+    ('SCL', 'SCL', 'Aeroporto Internacional Arturo Merino Benítez'), 
+    ('JFK', 'NYC', 'Aeroporto Internacional John F. Kennedy'), 
+    ('MEX', 'MEX', 'Aeroporto Internacional da Cidade do México'), 
+    ('GDL', 'GDL', 'Aeroporto Internacional de Guadalajara'), 
+    ('LHR', 'LON', 'Aeroporto de Londres Heathrow'), 
+    ('LDB', 'LDB', 'Aeroporto de Londrina'), 
+    ('HDL', 'LIS', 'Aeroporto Humberto Delgado'), 
+    ('CDG', 'PAR', 'Aeroporto de Paris-Charles de Gaulle'), 
+    ('DXB', 'DXB', 'Aeroporto Internacional de Dubai'), 
+    ('DCA', 'WAS', 'Aeroporto Nacional Ronald Reagan de Washington'), 
+    ('ATL', 'ATL', 'Aeroporto Internacional Hartsfield-Jackson Atlanta'), 
+    ('HND', 'TYO', 'Aeroporto Haneda'), 
+    ('DEN', 'DEN', 'Aeroporto Internacional de Denver'), 
+    ('GRU', 'SAO', 'Aeroporto Internacional de São Paulo/Guarulhos'), 
+    ('CGH', 'SAO', 'Aeroporto de São Paulo/Congonhas');
