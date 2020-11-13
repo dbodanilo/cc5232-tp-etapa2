@@ -99,10 +99,10 @@ CREATE INDEX ON public.voo_aeroporto
 
 
 CREATE TABLE public.cidade (
-    codigo_cidade varchar(250) NOT NULL,
+    codigo varchar(250) NOT NULL,
     nome varchar(250) NOT NULL,
     pais varchar(250) NOT NULL,
-    PRIMARY KEY (codigo_cidade)
+    PRIMARY KEY (codigo)
 );
 
 
@@ -114,6 +114,6 @@ ALTER TABLE public.trajeto ADD CONSTRAINT FK_trajeto__codigo_origem FOREIGN KEY 
 ALTER TABLE public.trajeto ADD CONSTRAINT FK_trajeto__codigo_destino FOREIGN KEY (codigo_destino) REFERENCES public.aeroporto(codigo_iata);
 ALTER TABLE public.trecho ADD CONSTRAINT FK_trecho__id_trajeto FOREIGN KEY (id_trajeto) REFERENCES public.trajeto(id_trajeto);
 ALTER TABLE public.trecho ADD CONSTRAINT FK_trecho__id_voo FOREIGN KEY (id_voo) REFERENCES public.voo(id_voo);
-ALTER TABLE public.aeroporto ADD CONSTRAINT FK_aeroporto__codigo_cidade FOREIGN KEY (codigo_cidade) REFERENCES public.cidade(codigo_cidade);
+ALTER TABLE public.aeroporto ADD CONSTRAINT FK_aeroporto__codigo_cidade FOREIGN KEY (codigo_cidade) REFERENCES public.cidade(codigo);
 ALTER TABLE public.voo_aeroporto ADD CONSTRAINT FK_voo_aeroporto__id_voo FOREIGN KEY (id_voo) REFERENCES public.voo(id_voo);
 ALTER TABLE public.voo_aeroporto ADD CONSTRAINT FK_voo_aeroporto__codigo_aeroporto FOREIGN KEY (codigo_aeroporto) REFERENCES public.aeroporto(codigo_iata);
