@@ -1,0 +1,11 @@
+Desconto de 3 pontos devido a entrega atrasada.
+
+Faltou detalhamento, o que dificultou o entendimento do MER
+
+Atributos dependentes, não está claro o motivo (dentro de aeroporto), CPF x ID passageiro
+
+Aeroporto pode não ter nenhuma atendente? Estranho.
+
+Poderiam ter explorado entidade fraca
+
+Entidade cidade seria atributo e  trajeto serviria mais como atributos da relação entre bilhete e voo

@@ -1,0 +1,59 @@
+voo
+    data/hora embarque
+    data/hora desembarque
+
+    (1..1) avião
+    (1..1) aeroporto origem
+    (1..1) aeroporto destino
+
+    (1..n) trajeto
+    (1..n) funcionário
+
+trajeto
+    (1..1) voo inicial
+    (1..1) voo final
+
+    (1..n) voo
+
+    (0..n) bilhete
+
+avião
+    (0..n) voo
+
+aeroporto
+    (1..1) cidade
+
+    (0..n) voo
+    (0..n) funcionário [atendente]
+
+cidade
+    (0..n) aeroporto
+
+funcionário
+    (0..n) voo [piloto e comissário]
+    ou
+    (0..n) aeroporto [atendente]
+
+passageiro
+    (0..n) bilhete
+
+bilhete
+    (1..1) passageiro
+    (1..1) funcionário
+
+    (1..n) trajeto
+
+
+voo x trajeto [relação]
+número de voos (escalas) [derivado]
+
+daoliveira
+lamaral
+mazevedo
+mguedes
+
+Nosso sistema tem o objetivo de facilitar a catalogação de uma companhia aérea em operação, sendo claro e direto, porém completo ao mostrar dados aos usuários que queiram consultar informações contidas no banco.
+
+Partindo de uma cidade, se confere se há em si um aeroporto para a execução de rotas. Cada aeroporto se mostra à companhia como uma relação de funcionários da empresa para o atendimento dos passageiros. Cada passageiro interage com um atendente em um aeroporto para comprar bilhetes. Cada bilhete se refere a um trajeto entre aeroportos. Cada trajeto representa uma sequência de voos, as escalas para um destino final. Cada voo ocorre com um certo modelo de avião, com rota entre um aeroporto de origem e um de destino, e é possível graças a um piloto e a uma lista de comissários.
+
+Seu objetivo é a intermediação tanto do processo de compra de bilhetes pelos passageiros quanto da distribuição de voos e alocação da equipe necessária a eles. É esperado que nosso sistema seja capaz de abarcar a inclusão de novos passageiros, voos, trajetos e funcionários; a consulta de voos por passageiro, por funcionário e por aeroporto.

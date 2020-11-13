@@ -1,0 +1,82 @@
+Entidade cidade seria atributo 
+e trajeto serviria mais como atributos da relação entre bilhete e voo
+
+Query a ser desenvolvida - Etapa 2:
+
+"Quais foram os top 5 trajetos mais vendidos. Indicar os aeroportos que pertencem a esse trajeto e qual a capacidade média de bagagem dos aviões que foram utilizados."
+
+
+
+Etapa 2) Revisão da Modelagem, Projeto Lógico da Base de Dados e Implementação
+    O material entregue na primeira etapa será corrigido/comentado e devolvido aos alunos. 
+    Também será entregue o enunciado de uma consulta a ser implementada. 
+
+    As melhorias eventualmente solicitadas bem como o enunciado da consulta devem ser observadas e resolvidas.
+    O esquema resultante da modelagem conceitual deve então ser mapeado para o modelo relacional utilizando a ferramenta StarUML. 
+    Os alunos devem descrever todas as regras de transformação aplicadas sobre o esquema ER original para derivação do esquema relacional correspondente. Deve-se explicitar como cada entidade, relacionamento, atributo e hierarquia de generalização foi transformado em elementos do modelo relacional, e o porquê da estratégia escolhida. 
+    As meras descrições textuais das tabelas resultantes não são consideradas regras de transformação.
+    Este esquema deve ser implementado usando o SGBD PostgreSQL. Devem ser inseridas um mínimo de instâncias interessantes para cada relação, de modo que se compreenda bem o UdD, e possa-se ainda detectar eventuais incorreções na modelagem. 
+    A consulta solicitada deve ser implementada, e os alunos devem colocar instâncias significativas em sua base de dados, de forma que toda consulta retorne pelo menos duas instâncias.
+
+Critérios de avaliação: 
+    correção e melhoria da descrição e da modelagem correspondente, projeto relacional (regras de mapeamento), implementação (escolha de tabelas e construtores apropriados).
+
+
+Material a ser entregue pelos grupos 
+ETAPA 2:
+- 1 Arquivo .pdf contendo
+- Material da Etapa 1 onde constam as correções feitas pelo professor
+- Mapeamento para relacional, com as regras aplicadas no esquema conceitual para geração de cada
+relação para cada entidade, relacionamento, hierarquia de generalização. (StarUML)
+- DDL correspondente à implementação das relações em SQL usando o SGBD PostgreSQL, e comandos de
+inserção de dados.
+- Para a consulta definida pelo professor, enunciado em português, implementação equivalente em SQL
+usando o SGBD PostgreSQL, e resultados da consulta.
+
+
+dicionário de dados é um plus
+ - já explica a tradução do MER ao Diagrama de Classes
+
+assento: agora atributo da relação entre bilhete e voo
+
+
+Viagem  :: v => Trajeto -> [Bilhete] -> Cliente -> v
+Bilhete :: b => Assento -> Voo -> b
+
+cliente :: c => CPF -> Passaporte -> c
+
+cliente compra viagem 
+cliente compra trajeto ((GRU, LIS), (LIS, LHR))
+trajeto composto de bilhetes
+bilhete relaciona voo, 
+
+Para não depender de suposições externas para a unicidade de uma candidata a chave primária, optamos pelo uso de ids sintéticos para todas as entidades, mesmo àquelas que contam com um identificador no mundo real, como ocorre com o CPF ou o passaporte de um cliente, por exemplo, que se mantém no desenho por motivos práticos do negócio, como requesitos de regulamentação e uma maior praticidade ao cliente.
+Assim, delegamos ao sistema que dependa da base de dados a verificação de casos extraordinários, como a repetição do número de um documento que se julgue único e seja usado externamente como tal. Garantimos a integridade apenas dos relacionamentos previstos na base, estes sempre conectados por nossos ids sintéticos.
+
+Com esse mesmo viés de garantir a identificação única de cada tupla, decidimos por não modelar explicitamente entidades fracas, visto que não identificamos quaisquer objetos passíveis de serem sempre identificados unicamente pela combinação seus atributos.
+De qualquer forma, a introdução de tabelas passarela para tratar relacionamentos de razão de cardinalidade N:M faz com que sim acabemos com a presença de tabelas sem um atributo id suplementar.
+
+No caso estudado pela equipe, há a possibilidade de um aeroporto não apresentar atendentes da companhia. Isso se deve a que nosso modelo se refere a apenas uma companhia aérea, que como tal, pode ou não alocar atendentes que a representem em um aeroporto, mas de modo algum controla as operações de quaisquer aeroporto e, por isso, sua ausência em algum deles é totalmente compreensível e não implica a inexistência de atendimento próprio ou de outras companhias no local.
+
+bilhete também possui atributo preço para que se guarde o valor do trecho no momento da compra
+    análogo ao atributo preço entre viagem e trajeto
+
+o preço de um trajeto não é a simples soma dos preços de seus trechos
+
+o trecho se refere ao preço de um voo num determinado trajeto
+
+
+voo 123
+aeroporto GRU
+portão B234
+hora 2020-11-10.18:30+00:00
+
+voo 222
+aeroporto SSA
+portão A115
+hora 2020-11-10.22:40+00:00
+
+exemplos:
+um mesmo voo para vários trajetos (sozinho e parte de uma viagem com escalas)
+
+Como passageiro, quero comprar um trajeto entre duas cidades, ainda que não seja um voo só
