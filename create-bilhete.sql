@@ -3,7 +3,8 @@ CREATE TABLE public.bilhete (
     datahora_compra timestamp without time zone NOT NULL,
     codigo_voo varchar(250) NOT NULL,
     assento varchar(250) NOT NULL,
-    preco numeric NOT NULL
+    preco numeric NOT NULL,
+    PRIMARY KEY (passaporte_passageiro, datahora_compra, codigo_voo)
 );
 
 CREATE INDEX ON public.bilhete
