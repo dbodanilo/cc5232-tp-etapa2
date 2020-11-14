@@ -5,4 +5,4 @@ DROP TABLE public.bilhete CASCADE;
 DROP TABLE public.trajeto CASCADE;
 DROP TABLE public.aeroporto CASCADE;
 DROP TABLE public.cidade CASCADE;
-DROP TABLE public.passageiro_trajeto CASCADE;
+DROP TABLE public.compra CASCADE;
