@@ -3,7 +3,6 @@ DROP TABLE public.aviao CASCADE;
 DROP TABLE public.passageiro CASCADE;
 DROP TABLE public.bilhete CASCADE;
 DROP TABLE public.trajeto CASCADE;
-DROP TABLE public.trecho CASCADE;
 DROP TABLE public.aeroporto CASCADE;
-DROP TABLE public.voo_aeroporto CASCADE;
 DROP TABLE public.cidade CASCADE;
+DROP TABLE public.passageiro_trajeto CASCADE;

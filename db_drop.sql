@@ -1,1 +1,1 @@
-DROP DATABASE etapa2;
+DROP DATABASE companhia;

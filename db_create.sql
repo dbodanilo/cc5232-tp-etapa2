@@ -1,6 +1,6 @@
 -- Database: etapa2
 -- Author: unifdaoliveira
-CREATE DATABASE etapa2
+CREATE DATABASE companhia
     WITH OWNER = postgres
         ENCODING = 'UTF8'
         TABLESPACE = pg_default
