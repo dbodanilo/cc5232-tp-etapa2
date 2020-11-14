@@ -92,10 +92,10 @@ select
 	inner join top5_trajeto_aeroporto as t_a
 		  on (t_a.codigo_origem, t_a.codigo_destino) = (top5.codigo_origem, top5.codigo_destino)
 	inner join aeroporto as aer_orig
-	      on t_a.codigo_origem = aer_orig.codigo_iata
+	      on t_a.codigo_origem = aer_orig.codigo_aeroporto
 	inner join aeroporto as aer_dest
-		  on t_a.codigo_destino = aer_dest.codigo_iata
+		  on t_a.codigo_destino = aer_dest.codigo_aeroporto
 	inner join aeroporto as aer
-		  on t_a.codigo_aeroporto = aer.codigo_iata
+		  on t_a.codigo_aeroporto = aer.codigo_aeroporto
 		  
 order by top5.num_vendas desc, t_b.media_bagagem desc;
