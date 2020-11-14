@@ -1,0 +1,158 @@
+trajeto 
+4	0	"GRU"	"GIG"
+voo
+3	5	"BR21"	"GRU"	"GIG"
+2x cada
+
+
+trajeto
+16	0	"GRU"	"MEX"
+voo
+9	1	"AL31"	"GRU"	"MEX"
+2x 2 deles
+
+
+trajeto
+40	0	"JFK"	"CDG"
+voo
+15	4	"TA31"	"JFK"	"CDG"
+
+trajeto
+36	0	"JFK"	"LHR"
+voo
+11	4	"TA11"	"JFK"	"LHR"
+
+
+trajeto
+28	0	"JFK"	"GIG"
+voos
+18  4   'HB12'   'JFK'   'GRU'
+3	5	"BR21"	"GRU"	"GIG"
+1x cada
+
+
+trajeto
+31	0	"SCL"	"JFK"
+voos
+8	1	"AL22"	"SCL"	"GRU"
+17  4   'HB11'   'GRU'   'JFK'
+1x 2 deles
+
+
+trajeto
+49, 'BSB', 'LHR'
+voos
+2	5	"BR12"	"BSB"	"GRU"
+17  4   'HB11'   'GRU'   'JFK'
+11	4	"TA11"	"JFK"	"LHR"
+2x 2 deles
+
+
+trajeto
+55, 'GIG', 'CDG'
+voos
+4	5	"BR22"	"GIG"	"GRU"
+17  4   'HB11'   'GRU'   'JFK'
+15	4	"TA31"	"JFK"	"CDG"
+1x 2 deles
+
+
+
+1	0	"BSB"	"GRU"
+2	0	"GRU"	"BSB"
+
+3	0	"GIG"	"GRU"
+4	0	"GRU"	"GIG"
+
+5	0	"SDU"	"GRU"
+6	0	"GRU"	"SDU"
+
+7	0	"CWB"	"GRU"
+8	0	"GRU"	"CWB"
+
+9	0	"PLU"	"GRU"
+10	0	"GRU"	"PLU"
+
+11	0	"EZE"	"GRU"
+12	0	"GRU"	"EZE"
+
+13	0	"SCL"	"GRU"
+14	0	"GRU"	"SCL"
+
+15	0	"MEX"	"GRU"
+16	0	"GRU"	"MEX"
+
+17	0	"JFK"	"GRU"
+18	0	"GRU"	"JFK"
+
+19	0	"LHR"	"GRU"
+20	0	"GRU"	"LHR"
+
+21	0	"HDL"	"GRU"
+22	0	"GRU"	"HDL"
+
+23	0	"CDG"	"GRU"
+24	0	"GRU"	"CDG"
+
+25	0	"BSB"	"JFK"
+26	0	"JFK"	"BSB"
+
+27	0	"GIG"	"JFK"
+28	0	"JFK"	"GIG"
+
+29	0	"EZE"	"JFK"
+30	0	"JFK"	"EZE"
+
+31	0	"SCL"	"JFK"
+32	0	"JFK"	"SCL"
+
+33	0	"MEX"	"JFK"
+34	0	"JFK"	"MEX"
+
+35	0	"LHR"	"JFK"
+36	0	"JFK"	"LHR"
+
+37	0	"HDL"	"JFK"
+38	0	"JFK"	"HDL"
+
+39	0	"CDG"	"JFK"
+40	0	"JFK"	"CDG"
+
+41, 'BSB', 'GIG'
+42, 'GIG', 'BSB'
+
+43, 'BSB', 'EZE'
+44, 'EZE', 'BSB'
+
+45, 'BSB', 'SCL'
+46, 'SCL', 'BSB'
+
+47, 'BSB', 'MEX'
+48, 'MEX', 'BSB'
+
+49, 'BSB', 'LHR'
+50, 'LHR', 'BSB'
+
+51, 'BSB', 'HDL'
+52, 'HDL', 'BSB'
+
+53, 'BSB', 'CDG'
+54, 'CDG', 'BSB'
+
+55, 'GIG', 'CDG'
+56, 'CDG', 'GIG'
+
+57, 'GIG', 'EZE'
+58, 'EZE', 'GIG'
+
+59, 'GIG', 'SCL'
+60, 'SCL', 'GIG'
+
+61, 'GIG', 'MEX'
+62, 'MEX', 'GIG'
+
+63, 'GIG', 'LHR'
+64, 'LHR', 'GIG'
+
+65, 'GIG', 'HDL'
+66, 'HDL', 'GIG'

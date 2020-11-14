@@ -1,0 +1,28 @@
+1	5	"BR11"	"GRU"	"BSB"
+2	5	"BR12"	"BSB"	"GRU"
+
+3	5	"BR21"	"GRU"	"GIG"
+4	5	"BR22"	"GIG"	"GRU"
+
+5	1	"AL11"	"GRU"	"EZE"
+6	1	"AL12"	"EZE"	"GRU"
+
+7	1	"AL21"	"GRU"	"SCL"
+8	1	"AL22"	"SCL"	"GRU"
+
+9	1	"AL31"	"GRU"	"MEX"
+10	1	"AL32"	"MEX"	"GRU"
+
+11	4	"TA11"	"JFK"	"LHR"
+12	4	"TA12"	"LHR"	"JFK"
+
+13	4	"TA21"	"JFK"	"HDL"
+14	4	"TA22"	"HDL"	"JFK"
+
+15	4	"TA31"	"JFK"	"CDG"
+16	4	"TA32"	"CDG"	"JFK"
+
+-- HUB
+17  4   'HB11'   'GRU'   'JFK'
+
+18  4   'HB12'   'JFK'   'GRU'
