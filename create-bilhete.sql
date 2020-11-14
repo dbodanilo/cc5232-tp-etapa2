@@ -1,19 +1,24 @@
 CREATE TABLE public.bilhete (
-    id_passageiro integer NOT NULL,
-    id_trajeto integer NOT NULL,
-    id_voo integer NOT NULL,
-    preco numeric NOT NULL,
+    passaporte_passageiro varchar(250) NOT NULL,
+    datahora_compra timestamp without time zone NOT NULL,
+    codigo_voo varchar(250) NOT NULL,
     assento varchar(250) NOT NULL,
-    data_compra timestamp without time zone NOT NULL
+    preco numeric NOT NULL
 );
 
 CREATE INDEX ON public.bilhete
-    (id_passageiro);
+    (passaporte_passageiro);
 CREATE INDEX ON public.bilhete
-    (id_trajeto);
+    (datahora_compra);
 CREATE INDEX ON public.bilhete
-    (id_voo);
+    (codigo_voo);
 
-ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__id_passageiro FOREIGN KEY (id_passageiro) REFERENCES public.passageiro(id_passageiro);
-ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__id_trajeto FOREIGN KEY (id_trajeto) REFERENCES public.trajeto(id_trajeto);
-ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__id_voo FOREIGN KEY (id_voo) REFERENCES public.voo(id_voo);
+ALTER TABLE public.bilhete 
+ADD CONSTRAINT FK_bilhete__id_compra 
+FOREIGN KEY (passaporte_passageiro, datahora_compra) 
+REFERENCES public.compra(passaporte_passageiro, datahora_compra);
+
+ALTER TABLE public.bilhete 
+ADD CONSTRAINT FK_bilhete__codigo_voo 
+FOREIGN KEY (codigo_voo) 
+REFERENCES public.voo(codigo_voo);
