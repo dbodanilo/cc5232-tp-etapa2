@@ -1,0 +1,11 @@
+regras de transformação - PENDENTE
+
+inserir ao menos duas tuplas a cada relação - PENDENTE
+
+dicionário de dados - EXTRA
+
+universo de discurso - OK
+
+modelo entidade-relacionamento - OK
+
+modelo relacional (starUML) - OK
