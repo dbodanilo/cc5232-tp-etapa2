@@ -3,6 +3,7 @@ CREATE TABLE public.voo (
     codigo_origem varchar(250) NOT NULL,
     codigo_destino varchar(250) NOT NULL,
     modelo_aviao varchar(250) NOT NULL,
+    cpf_piloto varchar(250) NOT NULL,
     datahora_partida timestamp without time zone NOT NULL,
     datahora_chegada timestamp without time zone NOT NULL,
     PRIMARY KEY (codigo_voo)
@@ -14,6 +15,8 @@ CREATE INDEX ON public.voo
     (codigo_destino);
 CREATE INDEX ON public.voo
     (modelo_aviao);
+CREATE INDEX ON public.voo
+    (cpf_piloto);
 
 
 CREATE TABLE public.aviao (
@@ -93,9 +96,49 @@ CREATE INDEX ON public.compra
     (codigo_destino);
 
 
+CREATE TABLE public.funcionario (
+    cpf_funcionario varchar(250) NOT NULL,
+    nome varchar(250) NOT NULL,
+    PRIMARY KEY (cpf_funcionario)
+);
+
+
+CREATE TABLE public.piloto (
+    cpf_funcionario varchar(250) NOT NULL,
+    breve varchar(250) NOT NULL
+);
+
+ALTER TABLE public.piloto
+    ADD UNIQUE (cpf_funcionario);
+
+
+CREATE TABLE public.atendente (
+    cpf_funcionario varchar(250) NOT NULL,
+    codigo_aeroporto varchar(250) NOT NULL
+);
+
+ALTER TABLE public.atendente
+    ADD UNIQUE (cpf_funcionario);
+
+CREATE INDEX ON public.atendente
+    (codigo_aeroporto);
+
+
+CREATE TABLE public.comissario_voo (
+    cpf_funcionario varchar(250) NOT NULL,
+    codigo_voo varchar(250) NOT NULL
+);
+
+CREATE INDEX ON public.comissario_voo
+    (cpf_funcionario);
+CREATE INDEX ON public.comissario_voo
+    (codigo_voo);
+
+
 ALTER TABLE public.voo ADD CONSTRAINT FK_voo__codigo_origem FOREIGN KEY (codigo_origem) REFERENCES public.trajeto(codigo_origem);
 ALTER TABLE public.voo ADD CONSTRAINT FK_voo__codigo_destino FOREIGN KEY (codigo_destino) REFERENCES public.trajeto(codigo_destino);
 ALTER TABLE public.voo ADD CONSTRAINT FK_voo__modelo_aviao FOREIGN KEY (modelo_aviao) REFERENCES public.aviao(modelo_aviao);
+ALTER TABLE public.voo ADD CONSTRAINT FK_voo__cpf_piloto FOREIGN KEY (cpf_piloto) REFERENCES public.piloto(cpf_funcionario);
 ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__passaporte_passageiro FOREIGN KEY (passaporte_passageiro) REFERENCES public.compra(passaporte_passageiro);
 ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__datahora_compra FOREIGN KEY (datahora_compra) REFERENCES public.compra(datahora_compra);
 ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__codigo_voo FOREIGN KEY (codigo_voo) REFERENCES public.voo(codigo_voo);
@@ -105,3 +148,8 @@ ALTER TABLE public.aeroporto ADD CONSTRAINT FK_aeroporto__codigo_cidade FOREIGN 
 ALTER TABLE public.compra ADD CONSTRAINT FK_compra__passaporte_passageiro FOREIGN KEY (passaporte_passageiro) REFERENCES public.passageiro(passaporte_passageiro);
 ALTER TABLE public.compra ADD CONSTRAINT FK_compra__codigo_origem FOREIGN KEY (codigo_origem) REFERENCES public.trajeto(codigo_origem);
 ALTER TABLE public.compra ADD CONSTRAINT FK_compra__codigo_destino FOREIGN KEY (codigo_destino) REFERENCES public.trajeto(codigo_destino);
+ALTER TABLE public.piloto ADD CONSTRAINT FK_piloto__cpf_funcionario FOREIGN KEY (cpf_funcionario) REFERENCES public.funcionario(cpf_funcionario);
+ALTER TABLE public.atendente ADD CONSTRAINT FK_atendente__cpf_funcionario FOREIGN KEY (cpf_funcionario) REFERENCES public.funcionario(cpf_funcionario);
+ALTER TABLE public.atendente ADD CONSTRAINT FK_atendente__codigo_aeroporto FOREIGN KEY (codigo_aeroporto) REFERENCES public.aeroporto(codigo_aeroporto);
+ALTER TABLE public.comissario_voo ADD CONSTRAINT FK_comissario_voo__cpf_funcionario FOREIGN KEY (cpf_funcionario) REFERENCES public.funcionario(cpf_funcionario);
+ALTER TABLE public.comissario_voo ADD CONSTRAINT FK_comissario_voo__codigo_voo FOREIGN KEY (codigo_voo) REFERENCES public.voo(codigo_voo);

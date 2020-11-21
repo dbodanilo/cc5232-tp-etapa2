@@ -6,3 +6,7 @@ DROP TABLE public.trajeto CASCADE;
 DROP TABLE public.aeroporto CASCADE;
 DROP TABLE public.cidade CASCADE;
 DROP TABLE public.compra CASCADE;
+DROP TABLE public.funcionario CASCADE;
+DROP TABLE public.piloto CASCADE;
+DROP TABLE public.atendente CASCADE;
+DROP TABLE public.comissario_voo CASCADE;
