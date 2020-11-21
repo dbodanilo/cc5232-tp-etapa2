@@ -14,12 +14,6 @@ CREATE INDEX ON public.bilhete
 CREATE INDEX ON public.bilhete
     (codigo_voo);
 
-ALTER TABLE public.bilhete 
-ADD CONSTRAINT FK_bilhete__id_compra 
-FOREIGN KEY (passaporte_passageiro, datahora_compra) 
-REFERENCES public.compra(passaporte_passageiro, datahora_compra);
+ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__id_compra FOREIGN KEY (passaporte_passageiro, datahora_compra) REFERENCES public.compra(passaporte_passageiro, datahora_compra);
 
-ALTER TABLE public.bilhete 
-ADD CONSTRAINT FK_bilhete__codigo_voo 
-FOREIGN KEY (codigo_voo) 
-REFERENCES public.voo(codigo_voo);
+ALTER TABLE public.bilhete ADD CONSTRAINT FK_bilhete__codigo_voo FOREIGN KEY (codigo_voo) REFERENCES public.voo(codigo_voo);

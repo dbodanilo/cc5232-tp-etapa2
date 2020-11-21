@@ -1,8 +1,8 @@
 CREATE TABLE public.aeroporto (
-    codigo_iata varchar(250) NOT NULL,
+    codigo_aeroporto varchar(250) NOT NULL,
     codigo_cidade varchar(250) NOT NULL,
     nome varchar(250) NOT NULL,
-    PRIMARY KEY (codigo_iata)
+    PRIMARY KEY (codigo_aeroporto)
 );
 
 CREATE INDEX ON public.aeroporto
