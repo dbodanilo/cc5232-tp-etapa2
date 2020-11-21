@@ -1,5 +1,5 @@
 INSERT INTO public.aeroporto(
-  codigo_iata, codigo_cidade, nome)
+  codigo_aeroporto, codigo_cidade, nome)
   VALUES 
     ('EZE', 'BUE', 'Aeroporto Internacional Ministro Pistarini'), 
     ('BSB', 'BSB', 'Aeroporto Internacional de Brasília'), 

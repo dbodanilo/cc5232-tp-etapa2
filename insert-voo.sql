@@ -1,46 +1,29 @@
--- ALTER TABLE public.voo add codigo_origem varchar(250);
--- ALTER TABLE public.voo add codigo_destino varchar(250)
-
--- ALTER TABLE public.voo 
--- ADD CONSTRAINT FK_voo__codigo_origem 
--- FOREIGN KEY (codigo_origem) 
--- REFERENCES public.aeroporto(codigo_iata);
-
--- ALTER TABLE public.voo 
--- ADD CONSTRAINT FK_voo__codigo_destino 
--- FOREIGN KEY (codigo_destino) 
--- REFERENCES public.aeroporto(codigo_iata);
-
--- avioes (asc em capacidade passageiros)
--- 5, 1, 4
-
 INSERT INTO public.voo(
-	id_voo, codigo_origem, codigo_destino, id_aviao, codigo)
-	VALUES 
- 	  (1, 'GRU', 'BSB', 5, 'BR11'),
- 	  (2, 'BSB', 'GRU', 5, 'BR12'),
+	codigo_voo, codigo_origem, codigo_destino, modelo_aviao, cpf_piloto, datahora_partida, datahora_chegada)
+	VALUES
+ 	  ('BR11', 'GRU', 'BSB', 'CRJ1000',    '1P', '2020-12-12T12:00:00', '2020-12-12T13:00:00'),
+ 	  ('BR12', 'BSB', 'GRU', 'CRJ1000',    '1P', '2020-12-12T14:00:00', '2020-12-12T15:00:00'),
   
- 	  (3, 'GRU', 'GIG', 5, 'BR21'),
- 	  (4, 'GIG', 'GRU', 5, 'BR22'),
+ 	  ('BR21', 'GRU', 'GIG', 'CRJ1000',    '1P', '2020-12-13T12:00:00', '2020-12-13T13:00:00'),
+ 	  ('BR22', 'GIG', 'GRU', 'CRJ1000',    '1P', '2020-12-13T14:00:00', '2020-12-13T15:00:00'),
   
- 	  (5, 'GRU', 'EZE', 1, 'AL11'),
- 	  (6, 'EZE', 'GRU', 1, 'AL12'),
+ 	  ('AL11', 'GRU', 'EZE', '737 MAX-10', '3P', '2020-12-12T12:00:00', '2020-12-12T13:00:00'),
+ 	  ('AL12', 'EZE', 'GRU', '737 MAX-10', '3P', '2020-12-12T14:00:00', '2020-12-12T15:00:00'),
   
- 	  (7, 'GRU', 'SCL', 1, 'AL21'),
- 	  (8, 'SCL', 'GRU', 1, 'AL22'),
+ 	  ('AL21', 'GRU', 'SCL', '737 MAX-10', '3P', '2020-12-13T12:00:00', '2020-12-13T13:00:00'),
+ 	  ('AL22', 'SCL', 'GRU', '737 MAX-10', '3P', '2020-12-13T14:00:00', '2020-12-13T15:00:00'),
   
- 	  (9, 'GRU', 'MEX', 1, 'AL31'),
- 	  (10, 'MEX', 'GRU', 1, 'AL32'),
+ 	  ('AL31', 'GRU', 'MEX', '737 MAX-10', '3P', '2020-12-14T12:00:00', '2020-12-14T13:00:00'),
+ 	  ('AL32', 'MEX', 'GRU', '737 MAX-10', '3P', '2020-12-14T14:00:00', '2020-12-14T15:00:00'),
   
- 	  (11, 'JFK', 'LHR', 4, 'TA11'),
- 	  (12, 'LHR', 'JFK', 4, 'TA12'),
+ 	  ('TA11', 'JFK', 'LHR', 'A380-800',   '2P', '2020-12-12T12:00:00', '2020-12-12T13:00:00'),
+ 	  ('TA12', 'LHR', 'JFK', 'A380-800',   '2P', '2020-12-12T14:00:00', '2020-12-12T15:00:00'),
   
- 	  (13, 'JFK', 'HDL', 4, 'TA21'),
- 	  (14, 'HDL', 'JFK', 4, 'TA22'),
+ 	  ('TA21', 'JFK', 'HDL', 'A380-800',   '2P', '2020-12-13T12:00:00', '2020-12-13T13:00:00'),
+ 	  ('TA22', 'HDL', 'JFK', 'A380-800',   '2P', '2020-12-13T14:00:00', '2020-12-13T15:00:00'),
 	  
- 	  (15, 'JFK', 'CDG', 4, 'TA31'),
- 	  (16, 'CDG', 'JFK', 4, 'TA32'),
+ 	  ('TA31', 'JFK', 'CDG', 'A380-800',   '2P', '2020-12-14T12:00:00', '2020-12-14T13:00:00'),
+ 	  ('TA32', 'CDG', 'JFK', 'A380-800',   '2P', '2020-12-14T14:00:00', '2020-12-14T15:00:00'),
 	  
-	  (17, 'GRU', 'JFK', 4, 'HB11'),
-	  (18, 'JFK', 'GRU', 4, 'HB12');
-	
+	  ('HB11', 'GRU', 'JFK', 'A380-800',   '1P', '2020-12-11T12:00:00', '2020-12-11T13:00:00'),
+	  ('HB12', 'JFK', 'GRU', 'A380-800',   '1P', '2020-12-11T14:00:00', '2020-12-11T15:00:00');
