@@ -25,17 +25,17 @@ Critérios de avaliação:
 Material a ser entregue pelos grupos 
 ETAPA 2:
 - 1 Arquivo .pdf contendo
-- Material da Etapa 1 onde constam as correções feitas pelo professor
+    - Material da Etapa 1 onde constam as correções feitas pelo professor - OK
 
-- Mapeamento para relacional, com as regras aplicadas no esquema conceitual para geração de cada
-relação para cada entidade, relacionamento, hierarquia de generalização. (StarUML)
+    - Mapeamento para relacional (StarUML) - OK
+        com as regras aplicadas no esquema conceitual para geração de cada relação para cada entidade, relacionamento, hierarquia de generalização. - OK
 
-- DDL correspondente à implementação das relações em SQL usando o SGBD PostgreSQL, e comandos de
-inserção de dados.
+    - DDL correspondente à implementação das relações em SQL usando o SGBD PostgreSQL
+        e comandos de inserção de dados.
 
-- Para a consulta definida pelo professor, enunciado em português, implementação equivalente em SQL
-
-usando o SGBD PostgreSQL, e resultados da consulta.
+    - Para a consulta definida pelo professor, enunciado em português - OK
+        implementação equivalente em SQL, usando o SGBD PostgreSQL - OK
+        e resultados da consulta. - OK
 
 
 dicionário de dados é um plus

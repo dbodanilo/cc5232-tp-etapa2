@@ -1,8 +1,8 @@
-regras de transformação - PENDENTE
-
-inserir ao menos duas tuplas a cada relação - PENDENTE
-
 dicionário de dados - EXTRA
+
+inserir ao menos duas tuplas a cada relação - OK
+
+regras de transformação - OK
 
 universo de discurso - OK
 
